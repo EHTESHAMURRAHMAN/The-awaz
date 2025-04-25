@@ -29,7 +29,7 @@ function Navbar() {
           <span className="brand-second">Awaz</span>
         </Link>
 
-      
+
         <button
           className="navbar-toggler"
           type="button"
@@ -40,7 +40,7 @@ function Navbar() {
         </button>
 
         <div className={`collapse navbar-collapse ${isExpanded ? 'show' : ''}`}>
-    
+
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             {admin ? (
               <>
@@ -61,7 +61,7 @@ function Navbar() {
 
           {/* Right Side Actions */}
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-            {admin ? (
+            {(
               <li className="nav-item dropdown">
                 <button
                   className="nav-link dropdown-toggle user-menu"
@@ -86,8 +86,6 @@ function Navbar() {
                   </li>
                 </ul>
               </li>
-            ) : (
-              <NavItem to="/admin/login" text="Sign in" onClick={closeMenu} />
             )}
           </ul>
         </div>
