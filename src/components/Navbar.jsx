@@ -61,7 +61,7 @@ function Navbar() {
 
           {/* Right Side Actions */}
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-            {(
+            {admin ? (
               <li className="nav-item dropdown">
                 <button
                   className="nav-link dropdown-toggle user-menu"
@@ -86,6 +86,8 @@ function Navbar() {
                   </li>
                 </ul>
               </li>
+            ) : (
+              <NavItem to="/admin/login" text="Sign in" onClick={closeMenu} />
             )}
           </ul>
         </div>
